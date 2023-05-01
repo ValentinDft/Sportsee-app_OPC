@@ -1,0 +1,19 @@
+.container {
+  width: 117px;
+  background-color: black;
+  color: white;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  small {
+    transform: rotate(-90deg);
+    padding-right: 250px;
+    width: 180px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
