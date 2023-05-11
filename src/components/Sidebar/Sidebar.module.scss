@@ -1,19 +1,31 @@
 .container {
-  width: 117px;
+  width: 120px;
   background-color: black;
   color: white;
   height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
 
-  small {
-    transform: rotate(-90deg);
-    padding-right: 250px;
-    width: 180px;
-    font-size: 12px;
-    font-weight: 500;
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    height: 70%;
+  }
+
+  .oui {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 120px;
+    height: 20%;
+
+    small {
+      transform: rotate(-90deg);
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 }

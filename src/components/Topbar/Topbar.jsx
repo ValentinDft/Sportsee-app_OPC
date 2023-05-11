@@ -1,12 +1,11 @@
 import styles from './Topbar.module.scss';
-import logo from '../../assets/img/logo.png';
 import { NavLink } from 'react-router-dom';
 
 const Topbar = () => {
   return (
     <div className={styles['container']}>
       <div className={styles['container-brand']}>
-        <img src={logo} alt="logo" />
+        <img src={`/images/icon/logo.png`} alt="logo" />
         <h1>SportSee</h1>
       </div>
       <nav>

@@ -1,14 +1,24 @@
 .container {
   width: calc(100vw - 117px);
-  padding: 20px 100px;
+  padding: 0px 100px;
 
   h1 {
     font-size: 48px;
     font-weight: 500;
+
+    span {
+      color: red;
+    }
   }
 
   p {
     font-size: 18px;
     font-weight: 400;
+  }
+
+  &-list-keyData {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }
