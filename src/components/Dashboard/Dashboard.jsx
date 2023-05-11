@@ -3,7 +3,6 @@ import styles from './Dashboard.module.scss';
 import PropTypes from 'prop-types';
 
 const Dashboard = ({ info, activity }) => {
-  console.log('dashboard', info);
   return (
     <div className={styles['container']}>
       <h1>

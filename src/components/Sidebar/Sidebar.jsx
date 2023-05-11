@@ -1,8 +1,4 @@
 import styles from './Sidebar.module.scss';
-// import yogaLogo from '../../assets/img/yoga.png';
-// import natationLogo from '../../assets/img/natation.png';
-// import veloLogo from '../../assets/img/velo.png';
-// import musculationLogo from '../../assets/img/musculation.png';
 import CardSport from './CardSport/CardSport.jsx';
 
 const Sidebar = () => {
