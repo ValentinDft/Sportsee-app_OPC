@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = 'http://localhost:3000/';
 
-const getApiDataAxios = (endpoint) => {
+const getApiData = (endpoint) => {
   return axios
     .get(baseUrl + endpoint)
     .then((response) => response.data.data)
@@ -12,9 +12,17 @@ const getApiDataAxios = (endpoint) => {
 };
 
 export const getUsersInfoWithAxios = (userId) => {
-  return getApiDataAxios('user/' + userId);
+  return getApiData('user/' + userId);
 };
 
 export const getUsersActivityWithAxios = (userId) => {
-  return getApiDataAxios('user/' + userId + '/activity');
+  return getApiData('user/' + userId + '/activity');
+};
+
+export const getUsersAverageSessionsWithAxios = (userId) => {
+  return getApiData('user/' + userId + '/average-sessions');
+};
+
+export const getUsersPerformanceWithAxios = (userId) => {
+  return getApiData('user/' + userId + '/performance');
 };

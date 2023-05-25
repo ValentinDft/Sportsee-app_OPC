@@ -1,0 +1,64 @@
+.container {
+  margin-top: 50px;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  width: 1000px;
+  padding: 0px 50px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 50px 0px;
+
+    p {
+      color: #20253a;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .legend {
+      display: flex;
+      gap: 50px;
+
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+
+        &_kg {
+          @extend .legend-bullet;
+          background-color: #282d30;
+        }
+        &_kcal {
+          @extend .legend-bullet;
+          background-color: #e60000;
+        }
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        color: #74798c;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.tooltip {
+  background-color: #e60000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

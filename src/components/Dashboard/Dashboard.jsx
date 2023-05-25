@@ -1,3 +1,4 @@
+import BarChart from '../BarChart/Barchart.jsx';
 import CardKeyData from '../CardKeyData/CardKeyData.jsx';
 import styles from './Dashboard.module.scss';
 import PropTypes from 'prop-types';
@@ -15,6 +16,7 @@ const Dashboard = ({ info, activity }) => {
         {info?.keyData && <CardKeyData id={'Glucides'} data={info.keyData?.carbohydrateCount} unit="g" />}
         {info?.keyData && <CardKeyData id={'Lipides'} data={info.keyData?.lipidCount} unit="g" />}
       </div>
+      <BarChart data={activity} />
     </div>
   );
 };

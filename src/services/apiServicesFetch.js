@@ -9,10 +9,18 @@ const getApiData = (endpoint) => {
     });
 };
 
-export const getUsersInfo = (userId) => {
+export const getUsersInfoWithFetch = (userId) => {
   return getApiData('user/' + userId);
 };
 
-export const getUsersActivity = (userId) => {
+export const getUsersActivityWithFetch = (userId) => {
   return getApiData('user/' + userId + '/activity');
+};
+
+export const getUsersAverageSessionsWithFetch = (userId) => {
+  return getApiData('user/' + userId + '/average-sessions');
+};
+
+export const getUsersPerformanceWithFetch = (userId) => {
+  return getApiData('user/' + userId + '/performance');
 };
