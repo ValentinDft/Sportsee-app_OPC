@@ -18,7 +18,7 @@ const Barchart = ({ data }) => {
 
   return (
     <div className={styles['container']}>
-      <div className={styles['header']}>
+      <div className={styles['header-chart']}>
         <p>Activité quotidienne</p>
         <div className={styles['legend']}>
           <span>

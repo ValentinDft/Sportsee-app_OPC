@@ -1,9 +1,10 @@
-import BarChart from '../BarChart/Barchart.jsx';
+import BarChart from '../charts/BarChart/Barchart.jsx';
 import CardKeyData from '../CardKeyData/CardKeyData.jsx';
 import styles from './Dashboard.module.scss';
 import PropTypes from 'prop-types';
+import Linechart from '../charts/Linechart/Linechart.jsx';
 
-const Dashboard = ({ info, activity }) => {
+const Dashboard = ({ info, activity, session }) => {
   return (
     <div className={styles['container']}>
       <h1>
@@ -17,6 +18,7 @@ const Dashboard = ({ info, activity }) => {
         {info?.keyData && <CardKeyData id={'Lipides'} data={info.keyData?.lipidCount} unit="g" />}
       </div>
       <BarChart data={activity} />
+      <Linechart data={session} />
     </div>
   );
 };
@@ -24,6 +26,7 @@ const Dashboard = ({ info, activity }) => {
 Dashboard.propTypes = {
   info: PropTypes.object.isRequired,
   activity: PropTypes.array.isRequired,
+  session: PropTypes.array.isRequired,
 };
 
 export default Dashboard;
