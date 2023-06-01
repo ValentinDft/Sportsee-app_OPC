@@ -8,12 +8,14 @@ import {
   getUsersInfoWithAxios,
   getUsersActivityWithAxios,
   getUsersAverageSessionsWithAxios,
+  getUsersPerformanceWithAxios,
 } from '../services/apiServicesAxios.js';
 
 function Home({ userId }) {
   const [infoUser, setInfoUser] = useState({});
   const [activityUser, setActivityUser] = useState([]);
   const [averageSessionUser, setAverageSessionUser] = useState([]);
+  const [performanceUser, setPerformanceUser] = useState([]);
 
   useEffect(() => {
     getUsersInfoWithAxios(userId)
@@ -37,12 +39,26 @@ function Home({ userId }) {
       .catch((error) => {
         console.error(error);
       });
+    getUsersPerformanceWithAxios(userId)
+      .then((data) => {
+        setPerformanceUser(data.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   return (
     <div className={styles['layout']}>
       <Sidebar />
-      {infoUser && <Dashboard info={infoUser} activity={activityUser} session={averageSessionUser} />}
+      {infoUser && (
+        <Dashboard
+          info={infoUser}
+          activity={activityUser}
+          session={averageSessionUser}
+          performance={performanceUser}
+        />
+      )}
     </div>
   );
 }
