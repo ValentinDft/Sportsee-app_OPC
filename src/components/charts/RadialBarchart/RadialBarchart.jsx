@@ -9,7 +9,7 @@ const RadialBarchart = ({ score }) => {
         <p>Score</p>
       </div>
 
-      <PieChart width={250} height={200}>
+      <PieChart width={250} height={180}>
         <Pie
           data={data}
           dataKey='score'

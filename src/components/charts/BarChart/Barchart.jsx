@@ -31,7 +31,7 @@ const Barchart = ({ data }) => {
         </div>
       </div>
 
-      <BarChart width={750} height={200} data={activityArray}>
+      <BarChart width={750} height={180} data={activityArray}>
         <CartesianGrid
           strokeDasharray='2 2'
           stroke='#DEDEDE'

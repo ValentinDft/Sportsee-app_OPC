@@ -1,5 +1,4 @@
 .container {
-  width: 120px;
   background-color: black;
   color: white;
   height: calc(100vh - 90px);
@@ -12,20 +11,21 @@
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    height: 70%;
+    height: 60%;
   }
 
-  .oui {
+  .brand {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 120px;
-    height: 20%;
+    height: 30%;
 
     small {
       transform: rotate(-90deg);
       font-size: 12px;
       font-weight: 500;
+      width: 140px;
+      margin-bottom: 30px;
     }
   }
 }

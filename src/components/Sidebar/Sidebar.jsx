@@ -10,7 +10,7 @@ const Sidebar = () => {
         <CardSport img={`/images/icon/velo.png`} />
         <CardSport img={`/images/icon/musculation.png`} />
       </div>
-      <div className={styles['oui']}>
+      <div className={styles['brand']}>
         <small>Copyright, SportSee 2020</small>
       </div>
     </div>

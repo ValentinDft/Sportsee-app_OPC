@@ -18,11 +18,11 @@ const Radarchart = ({ data }) => {
 
   return (
     <div className={styles['container']}>
-      <RadarChart width={200} height={230} data={newData}>
+      <RadarChart width={240} height={230} data={newData}>
         <PolarGrid gridType='polygon' radialLines={false} />
         <PolarAngleAxis
           dataKey='legend'
-          tick={{ fill: 'white', fontSize: 12, fontWeight: 500 }}
+          tick={{ fill: 'white', fontSize: 7, fontWeight: 500 }}
         />
         <Radar
           name='session'
