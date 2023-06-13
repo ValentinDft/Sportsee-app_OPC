@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './pages/Home.jsx';
+import Home from './pages/Home/Home.jsx';
 import './main.scss';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Topbar from './components/Topbar/Topbar.jsx';
+import Error from './pages/Error/Error.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '*',
-        element: <div>Erreur</div>,
+        element: <Error />,
       },
     ],
   },

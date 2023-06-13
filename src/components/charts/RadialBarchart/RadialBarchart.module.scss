@@ -8,4 +8,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  .title {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+
+    p {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  &-score {
+    position: absolute;
+    margin-top: 20px;
+
+    p {
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+    }
+    span {
+      color: #74798c;
+    }
+  }
 }

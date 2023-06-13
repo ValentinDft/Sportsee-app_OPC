@@ -33,7 +33,7 @@ const Linechart = ({ data }) => {
           domain={['dataMin - 20', 'dataMax']}
           hide={true}
         />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />} />
         <Line
           type='natural'
           dataKey='sessionLength'
@@ -48,6 +48,22 @@ const Linechart = ({ data }) => {
 
 Linechart.propTypes = {
   data: PropTypes.array.isRequired,
+};
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active) {
+    return (
+      <div className={styles['tooltip']}>
+        <span>{payload[0].value} min</span>
+      </div>
+    );
+  }
+  return null;
+};
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
 };
 
 export default Linechart;

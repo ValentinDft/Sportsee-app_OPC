@@ -19,7 +19,7 @@ const Dashboard = ({ info, activity, session, performance }) => {
           <div className={styles['container-min-charts']}>
             <Linechart data={session} />
             <Radarchart data={performance} />
-            <RadialBarchart />
+            <RadialBarchart score={info.todayScore || info.score} />
           </div>
         </div>
         <div className={styles['container-list-keyData']}>

@@ -1,7 +1,7 @@
 import './Home.module.scss';
-import Sidebar from '../components/Sidebar/Sidebar.jsx';
+import Sidebar from '../../components/Sidebar/Sidebar.jsx';
 import styles from './Home.module.scss';
-import Dashboard from '../components/Dashboard/Dashboard.jsx';
+import Dashboard from '../../components/Dashboard/Dashboard.jsx';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -9,7 +9,7 @@ import {
   getUsersActivityWithAxios,
   getUsersAverageSessionsWithAxios,
   getUsersPerformanceWithAxios,
-} from '../services/apiServicesAxios.js';
+} from '../../services/apiServicesAxios.js';
 
 function Home({ userId }) {
   const [infoUser, setInfoUser] = useState({});

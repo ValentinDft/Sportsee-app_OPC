@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    h1 {
+      color: #ff0101;
+      font-weight: 400;
+    }
+  }
+}
