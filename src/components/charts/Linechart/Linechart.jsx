@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types';
 import styles from './Linechart.module.scss';
-import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
 
 const Linechart = ({ data }) => {
   const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -15,33 +22,35 @@ const Linechart = ({ data }) => {
         <p>Durée moyenne des sessions</p>
       </div>
 
-      <LineChart width={230} height={100} data={newData}>
-        <XAxis
-          dataKey='day'
-          axisLine={false}
-          tickLine={false}
-          tick={{
-            fill: '#FFFFFF',
-            fontSize: '12px',
-            fontWeight: '500',
-            opacity: 0.5,
-          }}
-          padding={{ right: 5, left: 5 }}
-        />
-        <YAxis
-          dataKey='sessionLength'
-          domain={['dataMin - 20', 'dataMax']}
-          hide={true}
-        />
-        <Tooltip content={<CustomTooltip />} />
-        <Line
-          type='natural'
-          dataKey='sessionLength'
-          stroke='#FFFFFF'
-          strokeWidth={3}
-          dot={false}
-        />
-      </LineChart>
+      <ResponsiveContainer width='100%' height='100%'>
+        <LineChart data={newData}>
+          <XAxis
+            dataKey='day'
+            axisLine={false}
+            tickLine={false}
+            tick={{
+              fill: '#FFFFFF',
+              fontSize: '12px',
+              fontWeight: '500',
+              opacity: 0.5,
+            }}
+            padding={{ right: 5, left: 5 }}
+          />
+          <YAxis
+            dataKey='sessionLength'
+            domain={['dataMin - 20', 'dataMax']}
+            hide={true}
+          />
+          <Tooltip content={<CustomTooltip />} />
+          <Line
+            type='natural'
+            dataKey='sessionLength'
+            stroke='#FFFFFF'
+            strokeWidth={3}
+            dot={false}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };

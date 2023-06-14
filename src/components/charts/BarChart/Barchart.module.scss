@@ -6,7 +6,7 @@
   .header-chart {
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px 20px 0px;
+    padding: 20px 20px 20px 0px;
 
     p {
       color: #20253a;
@@ -16,7 +16,7 @@
 
     .legend {
       display: flex;
-      gap: 50px;
+      gap: 10px;
 
       &-bullet {
         width: 10px;

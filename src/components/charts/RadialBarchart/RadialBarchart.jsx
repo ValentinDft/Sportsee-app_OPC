@@ -15,8 +15,8 @@ const RadialBarchart = ({ score }) => {
           dataKey='score'
           startAngle={90}
           endAngle={430 * score + 70}
-          innerRadius={'60%'}
-          outerRadius={'70%'}
+          innerRadius={'70%'}
+          outerRadius={'80%'}
           cornerRadius={50}
           fill='#E60000'
         />

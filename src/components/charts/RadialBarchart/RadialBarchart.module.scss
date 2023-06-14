@@ -26,6 +26,13 @@
   &-score {
     position: absolute;
     margin-top: 20px;
+    background-color: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     p {
       font-size: 22px;
