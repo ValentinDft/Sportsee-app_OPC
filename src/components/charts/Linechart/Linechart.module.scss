@@ -36,3 +36,10 @@
     font-weight: 500;
   }
 }
+
+@media only screen and (max-device-width: 1400px) {
+  .container {
+    height: 180px;
+    width: 180px;
+  }
+}

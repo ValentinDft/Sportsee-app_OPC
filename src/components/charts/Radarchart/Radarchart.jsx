@@ -1,6 +1,12 @@
 import styles from './Radarchart.module.scss';
 import PropTypes from 'prop-types';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  ResponsiveContainer,
+} from 'recharts';
 
 const Radarchart = ({ data }) => {
   const legend = [
@@ -18,19 +24,21 @@ const Radarchart = ({ data }) => {
 
   return (
     <div className={styles['container']}>
-      <RadarChart width={240} height={230} data={newData}>
-        <PolarGrid gridType='polygon' radialLines={false} />
-        <PolarAngleAxis
-          dataKey='legend'
-          tick={{ fill: 'white', fontSize: 7, fontWeight: 500 }}
-        />
-        <Radar
-          name='session'
-          dataKey='value'
-          fill='#FF0101'
-          fillOpacity={0.7}
-        />
-      </RadarChart>
+      <ResponsiveContainer width={'100%'} height={230}>
+        <RadarChart data={newData}>
+          <PolarGrid gridType='polygon' radialLines={false} />
+          <PolarAngleAxis
+            dataKey='legend'
+            tick={{ fill: 'white', fontSize: 7, fontWeight: 500 }}
+          />
+          <Radar
+            name='session'
+            dataKey='value'
+            fill='#FF0101'
+            fillOpacity={0.7}
+          />
+        </RadarChart>
+      </ResponsiveContainer>
     </div>
   );
 };

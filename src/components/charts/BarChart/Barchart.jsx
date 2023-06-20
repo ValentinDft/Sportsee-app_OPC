@@ -45,7 +45,7 @@ const Barchart = ({ data }) => {
             strokeDasharray='2 2'
             stroke='#DEDEDE'
             vertical={false}
-            width={620}
+            width={'100%'}
             height={200}
           />
           <XAxis

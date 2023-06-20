@@ -1,5 +1,5 @@
 import styles from './RadialBarchart.module.scss';
-import { PieChart, Pie } from 'recharts';
+import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 
 const RadialBarchart = ({ score }) => {
   const data = [{ score: score * 100 }];
@@ -9,18 +9,20 @@ const RadialBarchart = ({ score }) => {
         <p>Score</p>
       </div>
 
-      <PieChart width={250} height={180}>
-        <Pie
-          data={data}
-          dataKey='score'
-          startAngle={90}
-          endAngle={430 * score + 70}
-          innerRadius={'70%'}
-          outerRadius={'80%'}
-          cornerRadius={50}
-          fill='#E60000'
-        />
-      </PieChart>
+      <ResponsiveContainer width={'100%'} height={180}>
+        <PieChart>
+          <Pie
+            data={data}
+            dataKey='score'
+            startAngle={90}
+            endAngle={430 * score + 70}
+            innerRadius={'70%'}
+            outerRadius={'80%'}
+            cornerRadius={50}
+            fill='#E60000'
+          />
+        </PieChart>
+      </ResponsiveContainer>
 
       <div className={styles['container-score']}>
         <p>
