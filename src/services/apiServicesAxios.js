@@ -7,7 +7,7 @@ const getApiData = (endpoint) => {
     .get(baseUrl + endpoint)
     .then((response) => response.data.data)
     .catch((error) => {
-      console.error(error);
+      return error;
     });
 };
 

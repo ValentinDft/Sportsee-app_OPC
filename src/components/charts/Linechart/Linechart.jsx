@@ -38,7 +38,7 @@ const Linechart = ({ data }) => {
           />
           <YAxis
             dataKey='sessionLength'
-            domain={['dataMin - 20', 'dataMax']}
+            domain={['dataMin - 20', 'dataMax + 5']}
             hide={true}
           />
           <Tooltip content={<CustomTooltip />} />
