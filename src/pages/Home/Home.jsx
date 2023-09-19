@@ -11,6 +11,12 @@ import {
   getUsersAverageSessionsWithAxios,
   getUsersPerformanceWithAxios,
 } from '../../services/apiServicesAxios.js';
+import {
+  USER_MAIN_DATA,
+  USER_ACTIVITY,
+  USER_AVERAGE_SESSIONS,
+  USER_PERFORMANCE,
+} from '../../assets/mock/data';
 
 function Home({ userId }) {
   const [infoUser, setInfoUser] = useState({});
@@ -53,7 +59,24 @@ function Home({ userId }) {
         setPerformanceUser(data.data);
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleUseMockData = (id) => {
+    USER_MAIN_DATA.map((user) => {
+      user.id === id && setInfoUser(user);
+    });
+    USER_ACTIVITY.map((activity) => {
+      activity.userId === id && setActivityUser(activity.sessions);
+    });
+    USER_AVERAGE_SESSIONS.map((session) => {
+      session.userId === id && setAverageSessionUser(session.sessions);
+    });
+    USER_PERFORMANCE.map((performance) => {
+      performance.userId === id && setPerformanceUser(performance.data);
+    });
+    setMsgError('');
+  };
 
   return (
     <div className={styles['layout']}>
@@ -68,6 +91,11 @@ function Home({ userId }) {
       ) : (
         <div className={styles['layout-error']}>
           <h2>{msgError}</h2>
+          <span>Use Mock data : </span>
+          <div className={styles['layout-error-button']}>
+            <button onClick={() => handleUseMockData(12)}>Karl</button>
+            <button onClick={() => handleUseMockData(18)}>Cecilia</button>
+          </div>
         </div>
       )}
     </div>

@@ -7,6 +7,7 @@ import Radarchart from '../charts/Radarchart/Radarchart.jsx';
 import RadialBarchart from '../charts/RadialBarchart/RadialBarchart.jsx';
 
 const Dashboard = ({ info, activity, session, performance }) => {
+  console.log(info);
   return (
     <div className={styles['container']}>
       <h1>
